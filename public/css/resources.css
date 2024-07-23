@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+header {
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000; /* Ensure it is above other elements */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+    background-image: linear-gradient(to bottom, rgb(14, 109, 14), rgba(0,128,0,0)); /* Green gradient to transparent */
+    font-family: "Montserrat", sans-serif; 
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: white;
+    color: white;
+    font-family: "Roboto", sans-serif; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+header :hover {
+    background-color: rgb(14, 109, 14);
+   
+}
+
+#logo {
+    max-width: 100px;
+    max-height: 100px;   
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+.navbar ul {
+    list-style-type: none;
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    font-weight: normal;
+      
+}
+
+.navbar li {
+    margin: 0px 15px;
+}
+
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-item a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: white;
+    transition: width 0.3s ease; 
+    position: relative;
+    bottom: -2px; 
+    left: 0;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+.navbar h1 {
+    flex-grow: 1;
+    text-align: left;
+    margin: 0;
+    margin-left: 15px;
+    font-size: 28px; 
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire container */
+}
+
+
+.bee2 {
+   
+    height: 90vh;
+    width: 100%;
+    overflow:hidden;
+    z-index: 1;
+}
+
+.section1 {
+    background-color: rgb(49, 135, 47);
+    margin: 0px 0px;
+    width: 100%; /* Adjust width as needed */
+    position: relative;
+    padding: 10px; /* Adjust padding as needed */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    display: flex; /* Use flexbox for layout */
+  
+    align-items: center; /* Align items vertically */
+    min-height: 50vh;
+    
+}
+
+.class1 h2 {
+    position: absolute;
+    bottom: 200px;
+    font-size: 5vw; 
+    color: #eeeeee;
+    font-family: "Montserrat", sans-serif;
+    margin-right: 10%; 
+}
+
+
+
+.class1  {
+    font-family: "Source Serif 4", sans-serif; 
+    left: 5%;
+    color: #eeeeee;
+    font-size: 20px;
+    text-align: left;
+    position: relative;
+    margin-right: 10%; 
+   
+}
+
+      .resourcelinks  {
+        margin-top: 10px;
+        list-style: "🌼 ";
+        list-style-position: outside;
+      }
+
+      .resourcelinks a {
+       color:white;
+       margin: 10px;
+       text-decoration: none;
+      }
+    
+      .resourcelinks ul li {
+        margin-top: 10px;
+        list-style-type: circle;
+        
+      }

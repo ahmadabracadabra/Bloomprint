@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+
+header {
+    position: fixed; /* Fix the header at the top */
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000; /* Ensure it is above other elements */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+    background-image: linear-gradient(to bottom, rgb(14, 109, 14), rgba(0,128,0,0)); /* Green gradient to transparent */
+    font-family: "Montserrat", sans-serif; 
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: white;
+    color: white;
+    font-family: "Source Serif 4", sans-serif; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+header :hover {
+    background-color: rgb(14, 109, 14);
+   
+}
+
+#logo {
+    max-width: 100px;
+    max-height: 100px;   
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+.navbar ul {
+    list-style-type: none;
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    font-weight: normal;
+      
+}
+
+.navbar li {
+    margin: 0px 15px;
+}
+
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-item a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: white;
+    transition: width 0.3s ease; 
+    position: relative;
+    bottom: -2px; 
+    left: 0;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+.navbar h1 {
+    flex-grow: 1;
+    text-align: left;
+    margin: 0;
+    margin-left: 15px;
+    font-size: 28px; 
+}
+
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire container */
+}
+
+
+.bee2 { 
+    height: 90vh;
+    width: 100%;
+    overflow:hidden;
+    z-index: 1;
+}
+
+
+.section1 {
+    background-color: green;
+    margin: 0px 0px;
+    width: 100%; /* Adjust width as needed */
+    position: relative;
+    padding: 20px; /* Adjust padding as needed */
+    padding-bottom: 7%;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+    min-height: auto;
+}
+
+.class1 h2 {
+    font-size: 5vw; 
+    color: #f7f5f5; /* Ensure text is visible against dark background */
+    font-family: "Montserrat", sans-serif; 
+    margin-left: 2%; 
+}
+
+.class1  {
+    font-size: 20px;
+    color: #ffffff; /* Ensure text is visible against dark background */
+    padding-right: 5%;
+    margin-left: 10%; 
+}
+
+#story1 {
+    max-width: 420px;
+    max-height: 420px;
+    margin-right: 15px; /* Push image to the right */
+    margin-left: 25px; /* Add space between text and image */
+    border-radius: 8px;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+
+.section2 {
+    background-color: white;
+    margin: 0px 0px;
+    width: 100%; /* Adjust width as needed */
+    position: relative;
+    padding: 10px; /* Adjust padding as needed */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row-reverse; /* Reverse the order of items */
+    align-items: center; /* Align items vertically */
+    min-height: auto;   
+}
+
+.class2 h2 {
+    position: relative;
+    font-size: 5vw; 
+    color: #333333;
+    font-family: "Montserrat", sans-serif;
+    margin-right: 10%; 
+}
+
+.class2 h3 {
+    position: relative;
+    font-size: 2vw; /* Responsive font size */
+    color: #333333;
+    font-family: "Montserrat", sans-serif;
+    margin-right: 10%; 
+}
+
+.class2  {
+    color: #333333;
+    font-size: 20px;
+    text-align: left;
+    position: relative;
+    margin-left: 2%; 
+}
+
+.ServiceList {
+    margin-top: 10px;
+    list-style: "🧑‍🌾";
+    list-style-position: outside;
+  }
+
+  .ServiceList ul li {
+    margin-top: 10px;
+    list-style-type: circle;
+  }
+
+  #offer1 {
+    border-radius: 8px;
+    max-width: 450px;
+    max-height: auto;
+    margin-left: 55px; /* Push image to the right */
+    margin-right: 65px; /* Add space between text and image */
+    margin-bottom: 25px;
+}
+
+
+
+.section3 {
+    background-image: url("../assets/LandscapeWeb.png");
+    background-color: #123b14;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    padding-bottom: 2%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    min-height: auto;
+}
+
+
+.class3 h2 {
+    font-size: 5vw; 
+    color: #efefef; /* Ensure text is visible against dark background */
+    font-family: "Montserrat", sans-serif; 
+    margin-left: 2%; 
+}
+
+.class3  {
+    font-family: "Montserrat", sans-serif; 
+    margin-top: 5%;
+    font-size: 20px;
+    color: white;
+    padding-right: 5%;
+    margin-left: 10%; 
+}
+
+
+#contactForm{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin-bottom: 10%;
+   
+}
+
+#contactForm label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+   
+}
+
+#contactForm .input-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 140px;
+    margin-bottom: 15px;
+}
+
+#contactForm .input-row input {
+    width: 180%;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 126%;
+    padding: 8px;
+    
+    margin-bottom: 2px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
+
+#contactForm button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 20%;
+}
+
+#contactForm button:hover {
+    background-color: #45a049;
+}
+
+
+
+
+

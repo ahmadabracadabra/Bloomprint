@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Browse through the Illinois native plant database and plan out your dream garden!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ahmad">
+    <meta name="keywords" content="native garden,garden,planner,garden planner,native,flowers,trees,forbs">
+    <title>Bloomprint</title>
+    <link rel="stylesheet" href="css/catalog.css">
+  </head>
+
+  <body>
+
+    <header>
+        <nav class="navbar" >
+          <a href = "home.html"><img id="logo" src="assets/logo1.png" alt="Logo"></a>
+          <h1>Bloomprint</h1>
+            <ul>
+             <li class="nav-item"><a href = "home.html">Home</a></li>
+             <li class="nav-item"> <a href = "about.html">About Us</a></li>
+             <li class="nav-item"> <a href = "planner.html">Garden Planner</a></li>
+             <li class="nav-item">  <a href = "catalog.html">Catalog</a></li>
+             <li class="nav-item"> <a href = "resources.html">Resources</a></li>
+            </ul>
+
+          </nav>  
+    </header>
+
+    <main>
+
+        <section class = "section1">
+            <h2>Explore the Native Plant Catalog </h2>
+          <p id="p1"> Discover the perfect plants for your native garden with our extensive database. 
+            Each plant profile includes detailed information to help you make informed decisions and create a garden that flourishes.
+          </p>
+        </section>
+
+
+        <div class="catalog-container">
+          <div class="search-filter">
+              <input type="text" id="search-bar" placeholder="Search...">
+              <div class="filters">
+                  <div class="filter-group" id="type-filter">
+                      <h3>Type</h3>
+                      <label><input type="checkbox" value="Forb"> Forb</label>
+                      <label><input type="checkbox" value="Fern"> Fern</label>
+                      <label><input type="checkbox" value="Shrub"> Shrub</label>
+                      <label><input type="checkbox" value="Tree"> Tree</label>
+                      <label><input type="checkbox" value="Grass"> Grass</label>
+                      <label><input type="checkbox" value="Annual"> Annual</label>
+                  </div>
+                  <div class="filter-group" id="light-filter">
+                      <h3>Light</h3>
+                      <label><input type="checkbox" value="Full Sun"> Full Sun</label>
+                      <label><input type="checkbox" value="Partial Shade"> Partial Shade</label>
+                      <label><input type="checkbox" value="Full Shade"> Full Shade</label>
+                  </div>
+                  <div class="filter-group" id="height-filter">
+                      <h3>Height</h3>
+                      <label><input type="checkbox" value="Ground"> Ground (<1')</label>
+                      <label><input type="checkbox" value="Short"> Short (1-3')</label>
+                      <label><input type="checkbox" value="Medium"> Medium (3-5')</label>
+                      <label><input type="checkbox" value="Tall"> Tall (>5')</label>
+                  </div>
+                  <div class="filter-group" id="moisture-filter">
+                      <h3>Soil Moisture</h3>
+                      <label><input type="checkbox" value="Dry to Medium"> Dry</label>
+                      <label><input type="checkbox" value="Dry to Medium" value="Medium to Moist"> Medium</label>
+                      <label><input type="checkbox" value="Moist" value = "Medium to Moist"> Moist</label>
+                  </div>
+                  <div class="filter-group" id="season-filter">
+                      <h3>Bloom Season</h3>
+                      <label><input type="checkbox" value="Winter"> Winter</label>
+                      <label><input type="checkbox" value="Spring"> Spring</label>
+                      <label><input type="checkbox" value="Summer"> Summer</label>
+                      <label><input type="checkbox" value="Fall"> Fall</label>
+                  </div>
+              </div>
+          </div>
+        
+          <div class="catalog" id="catalog">
+            <!-- Catalog items will be dynamically populated here -->
+        </div>
+    </div>
+        </div>
+        
+       
+
+
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Bloomprint. All rights reserved.</p>
+    </footer>
+
+    <script src="js/catalog.js"></script>
+ 
+    
+
+  </body>
+
+</html>

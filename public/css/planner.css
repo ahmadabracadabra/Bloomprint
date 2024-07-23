@@ -1,0 +1,368 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Basic styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-image: url(assets/Grass1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #094c0c;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+    background-image: linear-gradient(to bottom, rgb(14, 109, 14), rgba(0,128,0,0));
+    font-family: "Montserrat", sans-serif;
+}
+
+header:hover {
+    background-color: rgb(14, 109, 14);
+}
+
+#logo {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    font-weight: normal;
+}
+
+.navbar li {
+    margin: 0px 15px;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 18px;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-item a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: white;
+    transition: width 0.3s ease;
+    position: relative;
+    bottom: -2px;
+    left: 0;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+.navbar h1 {
+    flex-grow: 1;
+    text-align: left;
+    margin: 0;
+    margin-left: 15px;
+    font-size: 28px; 
+    color: white;
+}
+
+.section1 {
+    margin-top: 10%;
+    background-color: rgb(234, 234, 234);
+    width: 100%;
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row; /* Change to row to align tutorial on the left */
+    align-items: center;
+    min-height: auto;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Cover the entire container */
+}
+
+.tutorial {
+    height: 20vh;
+    width: 30%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.class1 h2 {
+    font-size: 5vw;
+    color: #141313;
+    font-family: "Montserrat", sans-serif;
+    margin-left: 5%; /* Change to margin-left for spacing from the left */
+}
+
+.class1 {
+    color: #1f1f1f;
+    font-size: 20px;
+    text-align: left;
+    position: relative;
+    margin-left: 5%; /* Change to margin-left for spacing from the left */
+}
+
+
+
+
+.container {
+    display: flex;
+    padding: 20px;
+    height: 80vh; /* Adjust as needed */
+}
+
+.design-window-section {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.design-window {
+    background-size: 40px 40px;
+    background-image:
+      linear-gradient(to right, grey 1px, transparent 1px),
+      linear-gradient(to bottom, grey 1px, transparent 1px);
+    width: 100%;
+    height: 70vh;
+    border-radius: 8px;
+    border: 8px solid #ccc;
+    display: flex;
+    background-color: #ffffff;
+}
+
+
+.designWindow-Buttons {
+    position: absolute;
+    left: 2%;
+    top: 70%;
+   
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: row; /* Stack sections vertically on smaller screens */
+        height: auto; /* Adjust height for better responsiveness */
+    }
+
+    .design-window-section {
+        width: 70%; /* Full width on smaller screens */
+    }
+
+    .design-window {
+        height: 50vh; /* Adjust height for smaller screens */
+    }
+
+    .designWindow-Buttons {
+        left: 2%;
+        top: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .design-window {
+        height: 40vh; /* Further adjust height for very small screens */
+    }
+
+    .designWindow-Buttons {
+        left: 2%;
+        top: 70%;
+    }
+}
+
+#delete {
+    border-radius: 8px;
+    background-color: lightcoral;
+}
+
+#save {
+    border-radius: 8px;
+    background-color: lightgreen;
+}
+#clear {
+    border-radius: 8px;
+    background-color: lightgrey;
+}
+
+.catalog-container {
+    width: 30%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 70vh;
+    overflow: hidden;
+    margin-top: 2%;
+}
+
+.search-filter {
+    display: flex;
+    justify-content: space-between; /* This makes the search bar take up remaining space */
+    align-items: center; /* Center align items vertically */
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#search-bar {
+    flex-grow: 1; /* This allows the search bar to take the available space */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#filter-toggle {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px; /* Add space between the search bar and button */
+    border-radius: 8px;
+}
+
+.catalog {
+    gap: 5px; /* Adjust spacing between items */
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensure items are spaced evenly */
+}
+
+.catalog-item h3 {
+    text-align: center;
+    margin: 10px 0; /* Add some margin for better spacing */
+}
+
+.catalog-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: calc(50% - 5px); /* Ensure two items per row, adjust based on the gap */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Add some margin at the bottom for spacing between rows */
+    display: flex;
+    flex-direction: column; /* Ensure items are stacked vertically */
+    align-items: center; /* Center align items */
+    cursor: pointer;
+}
+
+.catalog-item img {
+    width: 85%;
+    height: auto;
+    border-radius: 50%;
+    margin-left: 7%;
+    margin-top: 6%;
+    justify-self: center;
+}
+
+
+.catalog-item .flower-name-circle {
+    /* Your styles here */
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 50%;
+    background-color: rgb(23, 79, 25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #ddd;
+    color: #f0f0f0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em; /* Adjust font size as needed */
+    margin: 10px auto; /* Center the circle within the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: grab; /* Indicate that the circle can be dragged */
+}
+
+
+
+.catalog-item ul {
+    margin-top: 10px; /* Add some margin for better spacing */
+    font-size: small;
+}
+
+.filters {
+    position: absolute;
+    right: 0;
+    top: 60px; /* Adjust as needed to position below the search-filter */
+    background-color: white;
+    width: 200px; /* Adjust width as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 100;
+    display: none; /* Hidden by default */
+    display: flex;
+    flex-direction: column; /* Ensure the filters stack vertically */
+    max-height: 400px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.filter-group {
+    margin-bottom: 20px; /* Add space between filter groups */
+}
+
+.filter-group h3 {
+    margin-top: 0;
+    margin-bottom: 10px; /* Add space below the heading */
+}
+
+.filter-group label {
+    display: block; /* Make each label a block element */
+    margin-bottom: 5px; /* Add space between labels */
+}
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Browse through the Illinois native plant database and plan out your dream garden!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ahmad">
+    <meta name="keywords" content="native garden,garden,planner,garden planner,native,flowers,trees,forbs">
+    <title>Bloomprint</title>
+    <link rel="stylesheet" href="css/planner.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="home.html"><img id="logo" src="assets/logo1.png" alt="Logo"></a>
+            <h1>Bloomprint</h1>
+            <ul>
+                <li class="nav-item"><a href="home.html">Home</a></li>
+                <li class="nav-item"><a href="about.html">About Us</a></li>
+                <li class="nav-item"><a href="planner.html">Garden Planner</a></li>
+                <li class="nav-item"><a href="catalog.html">Catalog</a></li>
+                <li class="nav-item"><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section1">
+
+            <div class="tutorial">
+            <video controls>
+              <source src=" assets/PlannerTutorial.mp4" type="video/mp4">
+              Video not supported
+            </video>
+              </div>
+           
+            <div class="class1">
+                <h2>How it Works:</h2>
+                <ul class="directions">
+                    <li>Create Your Garden Layout: Use our drag-and-drop tool to design your garden's layout.</li>
+                    <li>Select Your Plants: Choose from a wide range of native plants suited to your specific conditions.</li>
+                    <li>Save and Share: Save your garden plans and share them with friends or on social media.</li>
+                    <li>Delete: Click 'Delete' to enter removal mode. Double-click plants to remove them. Click 'Delete' again to exit removal mode.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section2">
+        <div class="container">
+            <section class="design-window-section">
+                <div class=designWindow-Buttons>
+                    <button id="delete">Delete</button>
+                    <button id="save">Save</button>
+                    <button id="clear">Clear</button>
+                    </div>
+                <div class="design-window" id="designWindow" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    
+                    <!-- Design window content goes here -->
+                </div>
+               
+            </section>
+
+            <div class="catalog-container">
+                <div class="search-filter">
+                    <input type="text" id="search-bar" placeholder="Search...">
+                    <button id="filter-toggle" onclick="toggleFilter()">Show Filters</button>
+                    <div id="filters" class="filters">
+                        <div class="filter-group" id="type-filter">
+                            <h3>Type</h3>
+                            <label><input type="checkbox" value="Forb"> Forb</label>
+                            <label><input type="checkbox" value="Fern"> Fern</label>
+                            <label><input type="checkbox" value="Shrub"> Shrub</label>
+                            <label><input type="checkbox" value="Tree"> Tree</label>
+                            <label><input type="checkbox" value="Grass"> Grass</label>
+                            <label><input type="checkbox" value="Annual"> Annual</label>
+                        </div>
+                        <div class="filter-group" id="light-filter">
+                            <h3>Light</h3>
+                            <label><input type="checkbox" value="Full Sun"> Full Sun</label>
+                            <label><input type="checkbox" value="Partial Shade"> Partial Shade</label>
+                            <label><input type="checkbox" value="Full Shade"> Full Shade</label>
+                        </div>
+                        <div class="filter-group" id="height-filter">
+                            <h3>Height</h3>
+                            <label><input type="checkbox" value="Ground"> Ground (<1')</label>
+                            <label><input type="checkbox" value="Short"> Short (1-3')</label>
+                            <label><input type="checkbox" value="Medium"> Medium (3-5')</label>
+                            <label><input type="checkbox" value="Tall"> Tall (>5')</label>
+                        </div>
+                        <div class="filter-group" id="moisture-filter">
+                            <h3>Soil Moisture</h3>
+                            <label><input type="checkbox" value="Dry"> Dry</label>
+                            <label><input type="checkbox" value="Medium"> Medium</label>
+                            <label><input type="checkbox" value="Moist"> Moist</label>
+                        </div>
+                        <div class="filter-group" id="season-filter">
+                            <h3>Bloom Season</h3>
+                            <label><input type="checkbox" value="Winter"> Winter</label>
+                            <label><input type="checkbox" value="Spring"> Spring</label>
+                            <label><input type="checkbox" value="Summer"> Summer</label>
+                            <label><input type="checkbox" value="Fall"> Fall</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="catalog" id="catalog">
+                     <div class="catalog-item" id="catalog-item" draggable="true" ondragstart="drag(event)">
+                      <!-- Catalog items will be dynamically populated here --> 
+                     </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Bloomprint. All rights reserved.</p>
+    </footer>
+
+    <script src="js/planner.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+
+</html>
