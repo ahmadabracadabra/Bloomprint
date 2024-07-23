@@ -4,8 +4,8 @@
     "type": "module",
     "main": "database.js",
     "scripts": {
-        "start-app1": "node app.js",
-        "start-app2": "node app2.js",
+        "start-app1": "node src/app.js",
+        "start-app2": "node src/app2.js",
         "dev-app1": "nodemon app.js",
         "dev-app2": "nodemon app2.js",
         "start": "npm run start-app1 && npm run start-app2",
