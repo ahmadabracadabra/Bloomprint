@@ -3,14 +3,14 @@
     "version": "1.0.0",
     "type": "module",
     "main": "database.js",
-   "scripts": {
-    "start-app1": "node app.js",
-    "start-app2": "node app2.js",
-    "dev-app1": "nodemon app.js",
-    "dev-app2": "nodemon app2.js",
-    "start": "concurrently \"npm run start-app1\" \"npm run start-app2\"",
-    "dev": "concurrently \"npm run dev-app1\" \"npm run dev-app2\""
-   },
+    "scripts": {
+        "start-app1": "node ./src/app.js",
+        "start-app2": "node ./src/app2.js",
+        "dev-app1": "nodemon ./src/app.js",
+        "dev-app2": "nodemon ./src/app2.js",
+        "start": "concurrently \"npm run start-app1\" \"npm run start-app2\"",
+        "dev": "concurrently \"npm run dev-app1\" \"npm run dev-app2\""
+    },
     "keywords": [],
     "author": "",
     "license": "ISC",
@@ -28,6 +28,7 @@
         "npm": "10.7.0"
     },
     "devDependencies": {
+        "concurrently": "^8.2.2",
         "nodemon": "^3.1.4"
     },
     "description": ""
