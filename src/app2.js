@@ -1,19 +1,28 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 import { getMessage, getMessages, createMessage, deleteMessage, updateMessage } from './database2.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 
 app.use(cors({
-    origin: 'http://127.0.0.1:5500',
+    origin: 'https://bloomprint.xyz',
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ['Content-Type'],
 }));
 
-app.use(express.json());
+app.use(express.static(path.join(__dirname, '../public')));
 
-app.use(express.static('public'));
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public', 'home.html'));
+});
+
+app.use(express.json());
 
 app.get("/visitor_log", async (req, res) => {
     try {
@@ -87,7 +96,7 @@ app.use((err, req, res, next) => {
     res.status(500).send('Something broke!2');
 });
 
-const PORT = process.env.PORT || 8081;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
