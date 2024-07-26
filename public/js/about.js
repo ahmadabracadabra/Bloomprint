@@ -2,7 +2,7 @@
 
 // Function to submit the form
 async function submitForm(name, email, message) {
-    const response = await fetch('http://localhost:8081/visitor_log', {
+    const response = await fetch('https://bloomprint.xyz/visitor_log', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

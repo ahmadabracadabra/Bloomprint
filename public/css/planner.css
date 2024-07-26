@@ -12,7 +12,7 @@ html, body {
     font-family: "Roboto", sans-serif;
     display: flex;
     flex-direction: column;
-    background-image: url(assets/Grass1.png);
+    background-image: url('../assets/Grass1.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 async function fetchPlants() {
     try {
-        const response = await fetch('http://localhost:8080/Native_Plant_List');
+        const response = await fetch('https://bloomprint.xyz/Native_Plant_List');
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
