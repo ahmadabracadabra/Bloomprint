@@ -147,8 +147,8 @@ video {
 }
 
 .class1 h2 {
-    position: absolute;
-    bottom: 120px;
+    position: relative;
+    margin-bottom: 10px; /* Adjust margin as needed */
     font-size: 5vw; 
     color: #1b1b1b;
     font-family: "Montserrat", sans-serif;
@@ -157,8 +157,7 @@ video {
 
 
 
-.class1  {
-  
+.class1  { 
     left: 2%;
     color: #1b1b1b;
     font-size: 20px;
@@ -176,6 +175,7 @@ video {
     border-radius: 8px;
     margin-bottom: 2%;
     margin-top: 2%;
+    z-index: 2;
 }
 
 
@@ -197,7 +197,7 @@ video {
     top: 950px;
     max-width: 680px;
     max-height: 680px;
-   z-index: 1;
+    z-index: 0;
 }
 
 #Butterfly2 {
@@ -206,7 +206,7 @@ video {
     right: 180px;
     max-width: 480px;
     max-height: 480px;
-   z-index: 1;
+   z-index: 0;
 }
 
 .class2 {
@@ -221,6 +221,7 @@ video {
     color: rgb(0, 0, 0); /* Ensure text is visible against dark background */
     font-family: "Montserrat", sans-serif;
     margin-bottom: 20px; /* Adjust margin as needed */
+    z-index: 2;
 }
 
 #plannerad {
@@ -233,6 +234,8 @@ video {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
     align-self: center; /* Center the rectangle horizontally */
     margin-left: 8%;
+    z-index: 2;
+    
 }
 
 
@@ -247,6 +250,7 @@ video {
     display: flex; /* Use flexbox for layout */
     flex-direction: row-reverse; /* Reverse the order of items */
     align-items: center; /* Align items vertically */
+    z-index: 2;
 }
 .class3 {
     color: black; /* Ensure text is visible against dark background */
@@ -256,6 +260,7 @@ video {
     padding-right: 20px; /* Add padding to the right to create space */
     box-sizing: border-box; /* Include padding and border in element's total width and height */
     font-size: 20px;
+    z-index: 2;
 }
 
 .class3 h2 {
@@ -283,6 +288,7 @@ video {
     margin-left: auto; /* Ensures centering */
     margin-right: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
 }
 
 .catalog {
@@ -290,6 +296,7 @@ video {
     gap: 5px; /* Adjust spacing between items */
     padding: 10px;
     flex-wrap: nowrap; /* Ensure items are in a single row */
+    z-index: 2;
 }
 
 .catalog-item {
@@ -305,6 +312,7 @@ video {
     position: relative;
     color: black;
     cursor: pointer;
+    z-index: 2;
 }
 
 .catalog-item h3 {
@@ -357,6 +365,7 @@ video {
     color: #333333; /* Ensure text is visible against dark background */
     padding-right: 5%;
     margin-left: 10%; 
+    z-index: 2;
 }
 
 #invasive1 {

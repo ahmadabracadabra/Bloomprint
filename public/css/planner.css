@@ -167,10 +167,7 @@ video {
 
 
 .designWindow-Buttons {
-    position: absolute;
-    left: 2%;
-    top: 70%;
-   
+    position: relative; 
 }
 
 @media (max-width: 768px) {
