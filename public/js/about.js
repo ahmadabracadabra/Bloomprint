@@ -12,6 +12,7 @@ async function submitForm(name, email, message) {
     return response;
 }
 
+
 // Add event listener to the form
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('contactForm');

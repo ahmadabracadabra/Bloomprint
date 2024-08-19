@@ -2,7 +2,6 @@ import express from 'express';
 import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 import { getMessage, getMessages, createMessage, deleteMessage, updateMessage } from './database2.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -12,9 +11,11 @@ const app = express();
 
 app.use(cors({
     origin: 'https://bloomprint.xyz',
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: ['Content-Type'],
 }));
+
+app.use(express.json());
 
 app.use(express.static(path.join(__dirname, '../public')));
 
@@ -22,12 +23,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../public', 'home.html'));
 });
 
-app.use(express.json());
-
+// Define the visitor_log routes
 app.get("/visitor_log", async (req, res) => {
     try {
         const messages = await getMessages();
-        res.send(messages);
+        res.json(messages);
     } catch (error) {
         console.error(error);
         res.status(500).send('Server error');
@@ -39,7 +39,7 @@ app.get("/visitor_log/:id", async (req, res) => {
         const id = req.params.id;
         const message = await getMessage(id);
         if (message) {
-            res.send(message);
+            res.json(message);
         } else {
             res.status(404).send({ error: 'Message not found' });
         }
@@ -49,16 +49,19 @@ app.get("/visitor_log/:id", async (req, res) => {
     }
 });
 
-app.post("/visitor_log", async (req, res) => {
+app.post('/visitor_log', async (req, res) => {
+    const { name, email, message } = req.body;
+    console.log('Received POST request:', req.body);
     try {
-        const { name, email, message } = req.body;
         const newMessage = await createMessage(name, email, message);
-        res.status(201).send(newMessage);
+        console.log('Created new message:', newMessage);
+        res.status(201).json(newMessage);
     } catch (error) {
-        console.error(error);
-        res.status(500).send('Server error');
+        console.error('Error creating message:', error);
+        res.status(500).send(error.message);
     }
 });
+
 
 app.delete("/visitor_log/:id", async (req, res) => {
     try {
@@ -81,7 +84,7 @@ app.put("/visitor_log/:id", async (req, res) => {
         const { name, email, message } = req.body;
         const updatedMessage = await updateMessage(id, name, email, message);
         if (updatedMessage) {
-            res.send(updatedMessage);
+            res.json(updatedMessage);
         } else {
             res.status(404).send({ error: 'Message not found' });
         }
@@ -93,7 +96,7 @@ app.put("/visitor_log/:id", async (req, res) => {
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
-    res.status(500).send('Something broke!2');
+    res.status(500).send('Something broke!');
 });
 
 const PORT = process.env.PORT || 3001;

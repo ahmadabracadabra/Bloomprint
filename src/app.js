@@ -11,7 +11,7 @@ const app = express();
 
 app.use(cors({
     origin: 'https://bloomprint.xyz',
-    methods: ["GET"],
+    methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: ['Content-Type'],
 }));
 
